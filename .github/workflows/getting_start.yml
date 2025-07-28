@@ -10,22 +10,17 @@ jobs:
       - name: Send message to Slack
         run: |
           curl -X POST -H 'Content-type: application/json' --data '{
-            "blocks": [
-              {
-                "type": "section",
-                "text": {
-                  "type": "mrkdwn",
-                  "text": "*[sakura-internet-handson]* *CRITICAL:* *<h1>雨宮こころ</h1>* (<https://example.com|thara>)\n`proc_httpd` - Procs CRITICAL: Found 0 matching processes; cmd /httpd/ <https://example.com/alert|View Alert> <!channel>"
+            "attachments":[
+                {
+                  "fallback":"fallback Test",
+                  "pretext":"attachments Test",
+                  "color":"#D00000",
+                  "fields":[
+                      {
+                        "title":"attachment01",
+                        "value":"This is attachment"
+                      }
+                  ]
                 }
-              },
-              {
-                "type": "context",
-                "elements": [
-                  {
-                    "type": "mrkdwn",
-                    "text": "Role: `[vtuber]` *nijisanji*  Monitor: `[proc_httpd]` from *07/23 16:22*"
-                  }
-                ]
-              }
             ]
           }' ${{ secrets.SLACK_WEBHOOK_URL }}

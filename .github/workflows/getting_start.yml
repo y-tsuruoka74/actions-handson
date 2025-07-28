@@ -10,22 +10,25 @@ jobs:
       - name: Send message to Slack
         run: |
           TS=$(date +%s)
-          curl -X POST -H 'Content-type: application/json' --data '
+          cat <<EOF > payload.json
           {
             "channel": "dev-インターン_ハンズオン",
             "attachments": [
-                {
-                    "fallback": "ハンズオン Getting Started の通知",
-                    "color": "#215EBF",
-                    "pretext": "ハンズオン STEP0: Getting Started 完了✅ @channel",
-                    "author_name": "${{ vars.AUTHOR_NAME }}",
-                    "title": "Github Repository",
-                    "title_link": "${{ vars.REPOSITORY }}",
-                    "text": "Optional text that appears within the attachment",
-                    "footer": "インターン_ハンズオン BOT",
-                    "footer_icon": "https://raw.githubusercontent.com/jpb06/jpb06/master/icons/GithubActions-Dark.svg",
-                    "ts": $TS
-                }
+              {
+                "fallback": "ハンズオン Getting Started の通知",
+                "color": "#215EBF",
+                "pretext": "ハンズオン STEP0: Getting Started 完了✅ <!channel>",
+                "author_name": "${{ vars.AUTHOR_NAME }}",
+                "title": "Github Repository",
+                "title_link": "${{ vars.REPOSITORY }}",
+                "text": "Optional text that appears within the attachment",
+                "footer": "インターン_ハンズオン BOT",
+                "footer_icon": "https://raw.githubusercontent.com/jpb06/jpb06/master/icons/GithubActions-Dark.svg",
+                "ts": $TS
+              }
             ]
           }
-          ' ${{ secrets.SLACK_WEBHOOK_URL }}
+          EOF
+            curl -X POST -H 'Content-type: application/json' \
+              --data @payload.json \
+              ${{ secrets.SLACK_WEBHOOK_URL }}

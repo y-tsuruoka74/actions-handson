@@ -1,4 +1,4 @@
-name: Notify Slack
+name: Send Slack via Incoming Webhook
 
 on:
   workflow_dispatch:
@@ -7,12 +7,8 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - name: Send Slack message
+      - name: Send message to Slack
         run: |
-          curl -X POST https://slack.com/api/chat.postMessage \
-            -H "Authorization: Bearer ${{ secrets.SLACK_BOT_TOKEN }}" \
-            -H "Content-Type: application/json" \
-            -d '{
-              "channel": "#general",
-              "text": "username: getting start complete"
-            }'
+          curl -X POST -H 'Content-type: application/json' \
+            --data '{"text":"username: getting start complete"}' \
+            ${{ secrets.SLACK_WEBHOOK_URL }}

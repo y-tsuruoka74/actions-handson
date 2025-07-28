@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Notify to Slack
-      uses: ippanpeople/slack-notify-action@v0.0.1
+      uses: ippanpeople/slack-notify-action@v0.0.2
       with:
         webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
         thread_ts: "1753676783.810409"

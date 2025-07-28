@@ -17,7 +17,7 @@ jobs:
                 {
                     "fallback": "ハンズオン Getting Started の通知",
                     "color": "#215EBF",
-                    "pretext": "ハンズオン STEP0: Getting Started 完了✅",
+                    "pretext": "ハンズオン STEP0: Getting Started 完了✅ @channel",
                     "author_name": "${{ variables.AUTHOR_NAME }}",
                     "title": "Github Repository",
                     "title_link": "${{ variables.REPOSITORY }}",

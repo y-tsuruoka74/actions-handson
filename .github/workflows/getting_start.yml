@@ -9,32 +9,22 @@ jobs:
     steps:
       - name: Send message to Slack
         run: |
+          TS=$(date +%s)
           curl -X POST -H 'Content-type: application/json' --data '
           {
             "channel": "dev-インターン_ハンズオン",
             "attachments": [
                 {
-                    "fallback": "Plain-text summary of the attachment.",
-                    "color": "#00FF00",
-                    "pretext": "Optional text that appears above the attachment block",
-                    "author_name": "Bobby Tables",
-                    "author_link": "http://flickr.com/bobby/",
-                    "author_icon": "http://flickr.com/icons/bobby.jpg",
-                    "title": "Slack API Documentation",
-                    "title_link": "https://api.slack.com/",
+                    "fallback": "ハンズオン Getting Started の通知",
+                    "color": "#215EBF",
+                    "pretext": "ハンズオン STEP0: Getting Started 完了✅",
+                    "author_name": "${{ variables.AUTHOR_NAME }}",
+                    "title": "Github Repository",
+                    "title_link": "${{ variables.REPOSITORY }}",
                     "text": "Optional text that appears within the attachment",
-                    "fields": [
-                        {
-                            "title": "Priority",
-                            "value": "High",
-                            "short": false
-                        }
-                    ],
-                    "image_url": "http://my-website.com/path/to/image.jpg",
-                    "thumb_url": "http://example.com/path/to/thumb.png",
-                    "footer": "Slack API",
-                    "footer_icon": "https://platform.slack-edge.com/img/default_application_icon.png",
-                    "ts": 123456789
+                    "footer": "インターン_ハンズオン BOT",
+                    "footer_icon": "https://raw.githubusercontent.com/jpb06/jpb06/master/icons/GithubActions-Dark.svg",
+                    "ts": $TS
                 }
             ]
           }

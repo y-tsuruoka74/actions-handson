@@ -1,20 +1,18 @@
-name: First Step 02
+name: 02 Reusable Action
 
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
 
 jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
     - name: Notify to Slack
-      uses: ippanpeople/slack-notify-action@v0.0.3
+      uses: ippanpeople/slack-notify-action@v0.0.4
       with:
         webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
         thread_ts: "1753676783.810409"
         pretext: "STEP2: reusable action ✅ <!channel>"
-        author_name: "${{ vars.AUTHOR_NAME }}"
+        author_name: ":github_white: ${{ vars.AUTHOR_NAME }}"
         repository: "${{ vars.REPOSITORY }}"
         message: "(適宜変更してください)"

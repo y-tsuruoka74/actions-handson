@@ -1,4 +1,4 @@
-name: 01_fork_and_setup
+name: 01 Fork And Setup
 
 on:
   workflow_dispatch:
@@ -7,7 +7,7 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - name: Send message to Slack
+      - name: Notify to Slack
         run: |
           TS=$(date +%s)
           cat <<EOF > payload.json

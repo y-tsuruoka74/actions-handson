@@ -1,4 +1,4 @@
-name: 02 Reusable Workflow
+name: 02 Composite Actions
 
 on:
   workflow_dispatch:
@@ -12,7 +12,7 @@ jobs:
       with:
         webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
         thread_ts: "1753676783.810409"
-        pretext: "STEP2: reusable workflow ✅ <!channel>"
+        pretext: "STEP2: composite actions ✅ <!channel>"
         author_name: ":github_white: ${{ vars.AUTHOR_NAME }}"
         repository: "${{ vars.REPOSITORY }}"
         message: ":speech_balloon: (適宜変更してください)"

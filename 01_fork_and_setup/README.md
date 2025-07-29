@@ -1,3 +1,16 @@
+# 01 Fork And Setup GitHub Actions
+This step guides you through forking the repository and setting up GitHub Actions to prepare for the next steps in deploying a Go application to Sakura's AppRun service.
+
+> [!IMPORTANT]
+> Purpose: 使你初步了解如何在 GitHub Actions 中設置運行 Workflow 所需設定
+
+> [!IMPORTANT]
+> Goal: 設定 GitHub Actions 的 Permissions Secrets 和 Variables，並透過 Trigger 運行 Workflow 並確認
+
+## How to enable GitHub Actions
+
+## How to settings GitHub Actions Secrets and Variables
+
 ## To Do List
 - [ ] Fork the (repository)[https://github.com/ippanpeople/test]
 - [ ] Set up the GitHub Actions

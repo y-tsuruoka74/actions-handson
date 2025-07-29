@@ -1,0 +1,21 @@
+## To Do List
+- [ ] Configure Actions Secrets and Variables to prepare for AppRun, object storage deployment
+    - [ ] Create Actions Secret `REGISTRY` with your Container Registry URL
+    - [ ] Create Actions Secret `REGISTRY_USER` with your Container Registry Username
+    - [ ] Create Actions Secret `REGISTRY_PASSWORD` with your Container Registry Password
+    - [ ] Create Actions Secret `SAKURA_API_KEY` with your Sakura API Key
+    - [ ] Create Actions Secret `SAKURA_API_SECRET` with your Sakura API Secret
+    - [ ] Create Actions Variable `STORAGE_ACCESS_KEY` with your object storage access key
+    - [ ] Create Actions Variable `STORAGE_SECRET_KEY` with your object storage secret key
+- [ ] Test the workflow to ensure apprun will be deployed and sends a success message to Slack
+    - [ ] Go to the Actions tab in your repository
+    - [ ] Select the workflow and click on "Run workflow"
+    - [ ] Verify the message appears in your Slack channel
+- [ ] Verify the AppRun deployment
+    - [ ] Check the URL in the Slack message
+    - [ ] Access the URL in your browser to see the deployed application
+    - [ ] Add some messages to the board to test functionality
+- [ ] Test the persistence of data
+    - [ ] Modify the `main.go` file
+    - [ ] Redeploy the application using the workflow
+    - [ ] Access the URL again to verify that previously added messages are still displayed

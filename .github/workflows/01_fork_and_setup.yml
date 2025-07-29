@@ -18,7 +18,7 @@ jobs:
               {
                 "fallback": "ハンズオン 01_fork_and_setup の通知",
                 "color": "#215EBF",
-                "pretext": "STEP1: fork and setup 完了✅ <!channel>",
+                "pretext": "STEP1: fork and setup ✅ <!channel>",
                 "author_name": ":github_white: ${{ vars.AUTHOR_NAME }}",
                 "title": "Github Repository",
                 "title_link": "${{ vars.REPOSITORY }}",

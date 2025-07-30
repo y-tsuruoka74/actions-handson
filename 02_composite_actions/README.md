@@ -2,7 +2,7 @@
 前のステップでは、GitHub Actions の基本設定を行い、`run` でランナー内にコマンドを実行しました。このステップでは、Composite Actions を活用し、再利用可能なアクションによってワークフローの可読性と保守性が向上することを学びます。
 
 > [!IMPORTANT]
-> 目的: 実務では actions で複雑な処理を行うことが多いため、Composite Actions を使って再利用可能なアクションを作成する方法を学ぶ
+> 目的: 実務では actions で複雑な処理を行うことが多いため、Composite Actions を使って再利用可能なアクションを使う方法を学ぶ
 
 > [!IMPORTANT]
 > ゴール: Composite Actions を使う際のイメージを理解する

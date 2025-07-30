@@ -40,6 +40,7 @@ jobs:
         uses: ippanpeople/slack-notify-action@v0.0.5
         with:
           webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          thread_ts: "1753841974.019389"
           pretext: "STEP3: sacloud apprun action ✅ <!channel>"
           author_name: ":github_white: ${{ vars.AUTHOR_NAME }}"
           repository: "${{ vars.REPOSITORY }}"

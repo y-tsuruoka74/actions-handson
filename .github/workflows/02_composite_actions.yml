@@ -11,7 +11,7 @@ jobs:
       uses: ippanpeople/slack-notify-action@v0.0.4
       with:
         webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
-        thread_ts: "1753676783.810409"
+        thread_ts: "1753841968.598019"
         pretext: "STEP2: composite actions ✅ <!channel>"
         author_name: ":github_white: ${{ vars.AUTHOR_NAME }}"
         repository: "${{ vars.REPOSITORY }}"

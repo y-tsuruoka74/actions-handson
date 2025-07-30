@@ -13,7 +13,7 @@ jobs:
           cat <<EOF > payload.json
           {
             "channel": "dev-インターン_ハンズオン",
-            "thread_ts": "1753676783.810409",
+            "thread_ts": "1753841946.657239",
             "attachments": [
               {
                 "fallback": "ハンズオン 01_fork_and_setup の通知",

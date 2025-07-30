@@ -1,29 +1,39 @@
-# 01 Fork And Setup GitHub Actions
-This step guides you through forking the repository and setting up GitHub Actions to prepare for the next steps in deploying a Go application to Sakura's AppRun service.
+# 01 GitHub Actions のフォークとセットアップ
+このステップでは、リポジトリのフォークと GitHub Actions のセットアップ方法を解説し、Go アプリケーションをさくらの AppRun サービスにデプロイするための準備を行います。
 
 > [!IMPORTANT]
-> Purpose: 使你初步了解如何在 GitHub Actions 中設置運行 Workflow 所需設定
+> 目的: GitHub Actions でワークフローを実行するための設定方法を理解する
 
 > [!IMPORTANT]
-> Goal: 設定 GitHub Actions 的 Permissions Secrets 和 Variables，並透過 Trigger 運行 Workflow 並確認
+> ゴール: GitHub Actions のパーミッション、シークレット、変数の設定と、トリガーによるワークフロー実行の確認
 
-## How to enable GitHub Actions
+## GitHub Actions の有効化方法
+![GitHub Actions Workflow 無効化時の画面](workflow-disable.png)
+![なぜワークフローが無効化されているのか](why-workflow-disable.png)
+![ワークフローを有効化する方法](modify-to-enable.png)
+![有効化後の状態](workflow-enabled.png)
 
-## How to settings GitHub Actions Secrets and Variables
+## GitHub Actions のシークレットと変数の設定方法
+![GitHub Actions Secrets 設定画面](new-secret.png)
+![GitHub Actions Variables 設定画面](new-variable.png)
+![Secrets の具体的な設定例](set-secret.png)
+![Variables の具体的な設定例](set-variable.png)
+![Secrets 設定後の確認画面](varify-secret.png)
+![Variables 設定後の確認画面](varify-variables.png)
 
-## To Do List
-- [ ] Fork the (repository)[https://github.com/ippanpeople/test]
-- [ ] Set up the GitHub Actions
-    - [ ] ensure Workflow permissions are set to `Read and write` and `Allow GitHub Actions to create and approve pull requests`
-    - [ ] Create Actions Secret `SLACK_WEBHOOK_URL` with your Slack Incoming Webhook URL
-    - [ ] Create Actions Variable `AUTHOR_NAME` with your name
-    - [ ] Create Actions Variable `REPOSITORY` with your GitHub repository link
-- [ ] Configure the workflow to send a message to Slack
-    - [ ] Update "text" in the workflow with your message
-    - [ ] Push the changes to your repository
-- [ ] Test the workflow to ensure it sends a message to Slack
-    - [ ] Go to the Actions tab in your repository
-    - [ ] Select the workflow and click on "Run workflow"
-    - [ ] Verify the message appears in your Slack channel
+## To Do リスト
+- [ ] (リポジトリをフォークする)[https://github.com/ippanpeople/test]
+- [ ] GitHub Actions をセットアップする
+    - [ ] ワークフローのパーミッションを「Read and write」および「Allow GitHub Actions to create and approve pull requests」に設定
+    - [ ] Actions Secret `SLACK_WEBHOOK_URL` を作成し、Slack の Incoming Webhook URL を登録
+    - [ ] Actions Variable `AUTHOR_NAME` を作成し、自分の名前を登録
+    - [ ] Actions Variable `REPOSITORY` を作成し、自分の GitHub リポジトリリンクを登録
+- [ ] ワークフローを設定し、Slack へメッセージを送信できるようにする
+    - [ ] ワークフロー内の "text" を自分のメッセージに更新
+    - [ ] 変更をリポジトリにプッシュ
+- [ ] ワークフローが Slack へメッセージを送信できるかテスト
+    - [ ] リポジトリの Actions タブに移動
+    - [ ] 対象ワークフローを選択し「Run workflow」をクリック
+    - [ ] Slack チャンネルにメッセージが表示されることを確認
 
 
